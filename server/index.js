@@ -1,6 +1,11 @@
+require('dotenv').config()
+
+console.log(process.env.DB_CONNECTION_SECRET);
+
 const express = require('express');
 
 const app = express();
+
 
 app.get('/', (req, res) => {
   res.send('test');
