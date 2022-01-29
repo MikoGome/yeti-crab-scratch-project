@@ -1,4 +1,4 @@
-# 
+# Yeti Crab
 
-yeti-crab-scratch-project
+Connecting developers to entrepreneurs and other developers
 
