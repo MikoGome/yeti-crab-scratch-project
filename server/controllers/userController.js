@@ -27,7 +27,7 @@ function encrypt(password) {
 
 //jwt token created when user logs in or signs up
 function generateToken(id) {
-  return jwt.sign({id: id}, process.env.JWT_SECRET, {expiresIn: '2h'});
+  return jwt.sign({id: id}, process.env.JWT_SECRET, {expiresIn: '6h'});
 }
 /*-----refresh token currently not being used--------*/
 // function generateRefreshToken(id) {

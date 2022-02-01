@@ -23,7 +23,7 @@ function PostForm() {
       body: JSON.stringify(form)
     })
       .then(res => res.json())
-      .then(success => success ? navigate('/'): setPostFailed(true))
+      .then(success => success.success ? navigate('/'): setPostFailed(true))
   }
   return(
     <>
