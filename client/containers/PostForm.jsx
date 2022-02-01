@@ -37,15 +37,15 @@ function PostForm() {
           <h4>New Listing</h4>
           <div>
             <Header>Title</Header>
-            <Input type="text" name="title"></Input>
+            <Input type="text" name="title" required></Input>
           </div>
           <div>
             <Header>Skills Required</Header>
-            <Input type="text" name="skills"></Input>
+            <Input type="text" name="skills" required></Input>
           </div>
           <div>
             <Header>Contact Info</Header>
-            <Input type="text" name="contact"></Input>
+            <Input type="text" name="contact" required></Input>
           </div>
           <div>
             <Header>Description</Header>
