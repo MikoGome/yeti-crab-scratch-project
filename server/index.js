@@ -3,6 +3,8 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+const path = require('path');
+
 //Routers
 const apiRouter = require('./routes/apiRouter.js');
 //ERROR CODES
@@ -14,13 +16,14 @@ const cookieParser = require('cookie-parser');
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(cookieParser());
+app.use(express.static(path.join(__dirname, '..', 'build')));
 
 //when the path is /api, go into the apiRouter.js in routes folder
 app.use('/api', apiRouter);
 
 //When the client makes a GET request to homepage, send back the index.html
 app.get('/', (req, res) => {
-  return res.end('/');
+  return res.sendFile(path.join(__dirname, '..', 'build', 'index.html');
 });
 
 //404 NOT FOUND, unknown path handler
